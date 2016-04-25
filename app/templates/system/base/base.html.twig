@@ -1,0 +1,18 @@
+<!-- base.html.twig -->
+<!DOCTYPE html>
+<html>
+
+{% block head %}
+    {% include 'partials/head/dahsboard-head.html.twig' %}
+{% endblock %}
+
+<body class="{% block theme %}default{% endblock %}">
+    {% block content %}
+        {% embed 'partials/preloader.html.twig' %}{% endembed %}
+    {% endblock %}
+
+    {% block script %}
+        {% embed 'partials/js/js.html.twig' %}{% endembed %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Genesis - Tests</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/screen.css">
+
+        {% if debugbar %}
+            {% embed "partials/head/debugbar-head.html.twig" %}
+            {% endembed %}
+        {% endif %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <a href="#">Tests</a>
+                {% block header %}{% endblock %}
+            </header>
+            <div id="main">
+                {% block content %}{% endblock %}
+
+                <div id="setAppsValue" style="display:none;"></div>
+            </div>
+            <footer>
+                {% block footer %}{% endblock %}
+            </footer>
+        </div>
+
+        {# javascript #}
+        {% block script %}
+            {% embed "partials/js/js.html.twig" %}{% endembed %}
+        {% endblock %}
+
+        <p><a href="">@Filipe Xavier</a></p>
+    </body>
+</html>

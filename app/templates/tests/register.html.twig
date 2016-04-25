@@ -1,0 +1,73 @@
+{% extends "tests/layouts/layout.html.twig" %}
+
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{# header #}
+
+{% block header %}
+
+{% endblock %}
+
+{# content #}
+{% block content %}
+    <p>This is my Test skeleton. {{ data|raw }}</p>
+
+    {% if parent != null %}
+    	<p>Parent (N:1)</p>
+	    <div id="register-parent">
+			Name: {{ parent.getEntity.name }} (Id:{{ parent.getId }})
+			<form method="" 
+	    		  action="" class="form-horizontal">
+	    		  {{ parentForm|raw }}
+	    		  <a href="/test/register/{{ parent.getId }}">See...</a>
+	    	</form>
+		</div>
+	{% endif %}
+
+    <p>
+    	<form method="post" 
+    		  action="/test/update-register/{{ id_register }}" class="form-horizontal">
+    		  {{ fields|raw }}
+    	<input type="submit" value="submit"></form>
+    </p>
+
+    {% if childEntities != null %}
+
+        <div><a href="/test/list-child-register/{{ id_register }}">List Children</a></div>
+
+        <p>List of Children Entity Name:</p>
+		<div>
+
+			{% for key, result in childEntities %}
+                {% set entityName = result.entity.name %}
+				{% set entityId   = result.entity.id %}
+                {% set regs       = result.registers %}
+                    <tr>
+                        <div class="list-child-header-fields"
+                             data-type-entity="{{ entityId }}"
+                             data-type-register="{{ entityId }}">
+                             <a href="/test/list-entity-registers/{{ entityId }}">{{ entityName }}</a> ({{ entityId }})
+                        </div>
+                        {% if regs is not null %}
+                            <table>
+                                <tr>
+                                    {% for register in regs %}
+                                        {{ dump(register) }}
+                                    {% endfor %}
+                                </tr>
+                            </table>
+                        {%  endif %}
+                    </tr>
+
+			{% endfor %}
+		</div>
+	{% endif %}
+
+{% endblock %}
+
+{# footer #}
+{% block footer %}
+
+{% endblock %}

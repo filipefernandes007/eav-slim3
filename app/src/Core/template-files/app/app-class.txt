@@ -1,0 +1,9 @@
+<?php
+
+namespace App\Applications\{APPNAME};
+
+class {APPNAME} {
+    public function __construct() {
+        print "In {APPNAME}";
+    }
+}

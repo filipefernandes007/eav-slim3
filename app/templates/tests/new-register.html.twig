@@ -1,0 +1,24 @@
+{% extends "tests/layouts/layout.html.twig" %}
+
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{# header #}
+
+{% block header %}
+
+{% endblock %}
+
+{# content #}
+{% block content %}
+
+    <p>Create register for <b>{{ entity_name }} At State {{ state_name }}</b></p>
+    <p>
+    	<form method="post" 
+    		action="/test/create-register/{{ id_entity }}/{{ id_state }}" class="form-horizontal">
+    		{{ fields|raw }}
+    	<input type="submit" value="submit"></form>
+    </p>
+
+{% endblock %}

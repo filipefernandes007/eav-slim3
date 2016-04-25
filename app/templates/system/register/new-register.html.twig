@@ -1,0 +1,33 @@
+{% extends "tests/layouts/layout.html.twig" %}
+
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{# header #}
+
+{% block header %}
+
+{% endblock %}
+
+{# content #}
+{% block content %}
+    <p>Create register for <b>{{ entity_name }}</b></p>
+    <p>
+    	<form method="post" 
+    		action="/genesis/backend/app/module/state/{{ id_state }}/register" class="form-horizontal">
+    		{{ fields|raw }}
+    		<input name="state" type="hidden" value="{{ id_state }}">
+    		<input name="entity" type="hidden" value="{{ id_entity }}">
+    		<input type="submit" value="submit">
+    	</form>
+    </p>
+
+{% endblock %}
+
+{# footer #}
+{% block footer %}
+
+	<p><a href="">@Filipe Xavier</a></p>
+
+{% endblock %}

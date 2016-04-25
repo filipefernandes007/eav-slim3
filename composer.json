@@ -1,0 +1,30 @@
+{
+    "name": "eav-slim-php.3.0",
+    "description": "EAV pattern based on Slim Framework 3.0",
+    "license": "None",
+    "type": "project",
+    "keywords": ["eav","slim-framework","slim-php"],
+    "authors": [
+        {
+            "name": "Filipe Fernandes",
+            "email": "filipefernandes007@gmail.com",
+            "homepage": "http://ia.tomorrowtoday.pt/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\Controller\\": "app/src/controllers",
+            "App\\Entity\\": "app/src/entities",
+            "App\\Repository\\": "app/src/repository",
+            "App\\BaseAbstract\\": "app/src/BaseAbstract",
+            "App\\Core\\": "app/src/core"
+        }
+    },
+    "require": {
+        "slim/slim": "~3.0",
+        "slim/twig-view": "^2.0",
+        "slim/flash": "^0.1.0",
+        "monolog/monolog": "^1.17",
+        "doctrine/orm": "2.5.*"
+    }
+}

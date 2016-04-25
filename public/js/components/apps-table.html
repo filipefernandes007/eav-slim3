@@ -1,0 +1,14 @@
+<script type="text/template" id="apps-component">
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <% _.each(collection, function(values, i) { %>
+        <tr data-id="<%= values.id %>">
+            <td><%= values.id %></td>
+            <td><%= values.name %></td>
+        </tr>
+        <% }); %>
+    </table>
+</script>

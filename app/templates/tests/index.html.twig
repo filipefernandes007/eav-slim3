@@ -1,0 +1,24 @@
+{% extends "tests/layouts/layout.html.twig" %}
+
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{# header #}
+
+{% block header %}
+
+{% endblock %}
+
+{# content #}
+{% block content %}
+    <p>This is my Test skeleton.</p>
+    <p>{{ data|raw }}</p>
+{% endblock %}
+
+{# footer #}
+{% block footer %}
+
+	<p><a href="">@Filipe Xavier</a></p>
+
+{% endblock %}

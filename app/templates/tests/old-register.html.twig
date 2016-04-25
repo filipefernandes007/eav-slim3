@@ -1,0 +1,59 @@
+{% extends "tests/layouts/layout.html.twig" %}
+
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
+{# header #}
+
+{% block header %}
+
+{% endblock %}
+
+{# content #}
+{% block content %}
+    <p>This is my Test skeleton. {{ data|raw }}</p>
+    <p>
+    	<form method="post" 
+    		  action="/test/update-register/{{ id_register }}" class="form-horizontal">
+    		{{ fields|raw }}
+    	<input type="submit" value="submit"></form>
+    </p>
+    <p>Children</p>
+    
+	<table>
+		{% set entityId = null %}
+		{% set entityName = null %}
+		
+		{% for key, attributesEntity in entitiesAttributesHeader %}
+			
+			{% set entityName = attributesEntity[key].entity.getName %}
+			{% set entityId = attributesEntity[key].entity.getId %}
+
+			<tr>
+			<div class="list-child-header-fields"
+				data-type-entity="{{ entityId }}">
+				<a href="/test/list-registers/{{ entityId }}">{{ entityName }}</a>
+				<!--
+				{% for attribute in attributesEntity %}
+					{% set entityId = attribute.entity.getId %}
+					<th>{{ attribute.name }}</th>
+				{% endfor %}
+				
+				<div class="register-child-list" 
+					 data-type-entity="{{ entityId }}">
+					 <tr><td>X</td><td>Y</td><td>Z</td></tr>
+				</div>
+				-->
+			</div>
+			</tr>
+		{% endfor %}
+	</table>
+    
+    <div id="setAppsValue"></div>
+{% endblock %}
+
+{# footer #}
+{% block footer %}
+
+{% endblock %}

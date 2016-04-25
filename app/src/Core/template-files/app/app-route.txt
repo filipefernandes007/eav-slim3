@@ -1,0 +1,7 @@
+//START-{APPNAME}
+$app->get('/{APPNAME}', function() use ($app) {
+    ${APPNAME} = new \App\Applications\{APPNAME-UPPERCASE}\{APPNAME-UPPERCASE}();
+
+    print("Route {APPNAME}");
+})->name('{APPNAME}');
+//END-{APPNAME}
