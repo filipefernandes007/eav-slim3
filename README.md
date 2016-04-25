@@ -18,7 +18,7 @@ Base on https://github.com/vhchung/slim3-skeleton-mvc
 
 2. Execute `eav-slim3\sql\eav_slim3_db.sql` to create sample database (MySQL)
 
-### Run it:
+### Run it
 
 1. `$ cd eav-slim3`
 2. `$ php -S localhost:8000 -t ./public`
@@ -58,39 +58,39 @@ Set `logs` and `cache` folder permission to writable when deploy to production e
 * `app/src/repository`: Repository class directory
 * `app/src/Core`: Essential code
 
-The EAV Structure:
+The EAV Structure
 
-Application 1
-	...
-Application N
-	Module 1
-		...
-	Module 2
-		...
-	Module N
-		State 1 is related with Entity 1, and Entity 1 is defined by {'id':1, 'name':'X', 'description':'Blah!'} 
+- Application 1
+-	...
+- Application N
+	- Module 1
+	-	...
+	- Module 2
+	- ...	
+	- Module N
+	-	State 1 is related with Entity 1, and Entity 1 is defined by {'id':1, 'name':'X', 'description':'Blah!'} 
 			...
-		State N is related with Entity M
-			Register N + 1 
+	-	State N is related with Entity M
+	-		Register N + 1 
 				AttributeValue M
 				AttributeValue M + 1
 				AttributeValue M + 2
-			Register N + 2
-			...
-			Register N + 3
+	-		Register N + 2
+		
+	-		Register N + 3
 			...
 			Register N + N
-i must rem
-Entity M
-	Attribute 1
-		Type Int
-	Attribute 2
-		Type String32
-	Attribute 3
-		Type String32
-	...
-	Attribute N
-		Type String256
+
+- Entity M
+	- Attribute 1
+		- Type Int
+	- Attribute 2
+		- Type String32
+	- Attribute 3
+		- Type String32
+	- ...
+	- Attribute N
+		- Type String256
 
 ###
 
