@@ -1,6 +1,6 @@
 # EAV - Slim 3 MVC Skeleton
 
-This is a skeleton MVC project based on Entity Attribute Value pattren for Slim 3,
+This is a skeleton MVC project based on [Entity Attribute Value Model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model) for Slim 3,
 and includes Doctrine, Twig, Flash messages and Monolog.
 
 Base on https://github.com/vhchung/slim3-skeleton-mvc
